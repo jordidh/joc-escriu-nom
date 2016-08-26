@@ -9,7 +9,7 @@ El programa depèn de:
 
 Per que funcioni correctament el programa ha de carregar dues imatges:
 * bb8.png: per quan s'ha escrit correctament el nom
-* darkvadaer.jpg: per quan s'ha escrit una lletra equivocada
+* darkvader.jpg: per quan s'ha escrit una lletra equivocada
 
 ## Execució del programa
 ```

@@ -41,10 +41,11 @@ index = 0
 nomEscrit = "";
 #imgOK = Image.open("bb8.png")
 #imgKO = Image.open("darkvader.jpg")
-digues("Escriu la " + ordinal(index) + " lletra")
+digues("Escriu " + nom)
 while index < len(nom):
     print("Has d'escriure \"" + nom + "\" i has escrit \"" + nomEscrit + "\". Escriu una lletra:")
     print(nom + " -> " + nomEscrit)
+    digues("Busca la lletra " + nom[index])
     keyPressed = readchar.readchar().upper()
     if keyPressed == "EXIT":
         sys.exit()
@@ -59,14 +60,14 @@ while index < len(nom):
         if nom[index] != keyPressed:
             #imgKO.show()
             p = subprocess.Popen(["display", "darkvader.jpg"])
-            digues("No has escrit la lletra correcte. Torna-ho a provar")
+            digues("NO. Has escrit la " + keyPressed + ". Torna-ho a provar")
             p.kill()
             #imgKO.close()
         else:
             if index < (len(nom) - 1):
                 nomEscrit = nomEscrit + keyPressed
                 index = index + 1
-                digues("Perfecte. Ara escriu la " + ordinal(index) + " lletra") 
+                #digues("Perfecte. Ara escriu la " + ordinal(index) + " lletra") 
             else:
                 #imgOK.show()
                 p = subprocess.Popen(["display", "bb8.png"])
@@ -76,5 +77,5 @@ while index < len(nom):
                 index = index + 1
         
 print("Fi del joc. Torna-ho a provar amb un altre nom")
-digues("Fi del jòc. Si vols, torna-ho a provar amb un altre nòm")
+#digues("Fi del jòc. Si vols, torna-ho a provar amb un altre nòm")
 
